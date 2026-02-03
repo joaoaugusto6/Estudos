@@ -16,11 +16,18 @@
   --destaque-2:#449bff;
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 1.2em;
   background-color: var(--destaque-1);
   color: var(--texto);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 header {
@@ -39,7 +46,6 @@ header > h1 {
 }
 
 header > p {
-  font-family: var(--fonte-padrao);
   font-size: 1.2em;
   color: white;
   max-width: 600px;
@@ -57,13 +63,23 @@ nav {
   padding: 12px;
 }
 
-nav > a {
+a {
   color: var(--destaque-inverso);
   padding: 10px;
   border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
   transition-duration: .5s;
+}
+
+footer a {
+  color: var(--destaque-inverso);
+  text-decoration: none;
+  font-weight: bold;
+  transition-duration: .5s;
+}
+footer a:hover {
+  color: var(--destaque-2);
 }
 
 nav a:hover {
@@ -75,12 +91,13 @@ main {
   min-width: 300px;
   max-width: 1000px;
   margin: auto;
-  margin-bottom: 30px;
+  margin-top: 20px;
+  margin-bottom: 10px;
   padding: 20px;
   background-color: white;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.418);
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-radius: 8px;
+  flex: 1;
 }
 
 main h2 {
@@ -97,8 +114,71 @@ main p {
   line-height: 1.7em;
 }
 
-main > img {
-  max-width: 350px;
+img {
   display: block;
   margin: auto;
+  max-width: 300px;
+  width: 100%;
+}
+
+details {
+  background: #f0f0f0;
+  padding: 10px;
+  border-radius: 8px;
+  width: 250px;
+  margin: auto;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+ul {
+  list-style: inside;
+  padding: 0;
+  columns: 1;
+}
+
+li {
+  background: #f0f0f0;
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.item {
+  position: relative;
+  cursor: pointer;
+}
+
+.botao {
+  display: block;
+  margin: 20px auto;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  background: var(--destaque);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: .5s;
+}
+
+.botao:hover {
+  background: var(--destaque-1);
+}
+
+footer {
+  background-image: linear-gradient(to bottom, var(--destaque), var(--destaque));
+  text-align: center;
+  padding: 12px;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer {
+  border: 4px solid var(--destaque)
 }
