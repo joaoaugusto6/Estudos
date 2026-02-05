@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --principal: #002fff;
+    --secundario: #0084ff;
+    --terciario: #00aeff;
+    --fonte: #000000;
+    --fonte-inverso: #ffffff;
+    --quarta-cor: #00b7ff;
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1em;
+    color: var(--fonte);
+    background-color: var(--fonte-inverso);
+}
+
+header {
+    background-color: var(--principal);
+}
+
+#menu {
+    color: var(--fonte-inverso);
+}
+
+#menu a {
+    color: var(--fonte-inverso);
+    background-color: var(--principal);
+}
+
+#menu a:hover {
+    color: var(--terciario);
+    background-color: var(--secundario);
+}
